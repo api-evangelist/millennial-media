@@ -1,8 +1,25 @@
 aid: millennial-media
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/millennial-media.png
 name: Millennial Media
-description: 'Millennial Media is a company surfaced as a portfolio company of bessemer-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: 'Millennial Media was a mobile advertising / adtech company surfaced as a portfolio company
+  of bessemer-venture-partners and added to the API Evangelist network as a stub for enrichment. The
+  enrichment probe (2026-07-20) found the company is defunct: millennialmedia.com now CNAMEs to
+  rc.yahoo.com via AWS Global Accelerator on oath.cloud (Yahoo / Verizon Media / Oath infrastructure,
+  consistent with the AOL acquisition of Millennial Media), and every host returns HTTP 404. There is no
+  independent millennial-media developer portal, API, developer.* or api.* subdomain (NXDOMAIN), and no
+  /.well-known/ or /llms.txt discovery surface. No API artifacts exist to enrich; this record is retained
+  as a historical/company lead only.'
 url: https://raw.githubusercontent.com/api-evangelist/millennial-media/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,13 +29,27 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-- Unknown
+- Advertising
+- AdTech
+- Mobile Advertising
+- Defunct
+- Acquired
+x-status: defunct
+x-status-evidence:
+- 'DNS: millennialmedia.com CNAME -> rc.yahoo.com -> AWS Global Accelerator (oath.cloud)'
+- 'HTTP: www/root/docs return 404; developer.* and api.* are NXDOMAIN (probed 2026-07-20)'
+- 'No /.well-known/security.txt, /.well-known/openid-configuration, or /llms.txt (all 404)'
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
